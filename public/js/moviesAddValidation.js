@@ -10,6 +10,10 @@ window.onload = function () {
   //------DESDE AQUÍ CONTINÚE CON LAS VALIDACIONES DEL FORMULARIO //
   //-------------------DE REGISTRO DE PELÍCULAS------------------//
 
+  formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+  })
+
   const addMovies = $("addMovies");
   const elements = addMovies.elements;
 
@@ -29,6 +33,8 @@ window.onload = function () {
     target.classList.remove('is-invalid')
     target.classList.add('is-valid');
   };
+
+  
 
   $("title").addEventListener("focus", function (e) {
     cleanError("titleMsg", e)
